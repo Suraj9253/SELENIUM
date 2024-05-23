@@ -1,0 +1,71 @@
+//First program to automate
+
+package JavaPackage;
+
+import org.openqa.selenium. WebDriver; 
+import org.openqa.selenium.chrome.ChromeDriver; 
+
+
+public class AutomateProgram1 {
+	
+	public static void main (String[] args) throws InterruptedException {
+
+
+		// setting the property of chrome browser and passing chrome driver path
+		System.setProperty("webdriver.chrome.driver", "E:\\Chrome Driver\\chromedriver-win64\\chromedriver.exe"); 
+		
+		
+		
+        
+         WebDriver driver = new ChromeDriver();
+         //Open URL using get() method 
+     	driver.get("https://www.facebook.com/login/");
+
+
+     //Maximize the Window
+
+     Thread.sleep(2000);
+     driver.manage().window().maximize();
+
+     //DELETE ALL COOCKIES
+
+     Thread.sleep(2000);
+     driver.manage().deleteAllCookies();
+
+     //Navigate to url
+
+     Thread.sleep(2000);
+     driver.navigate().to("https://www.google.com/");
+
+     //Refresh the page 
+     Thread.sleep(2000);
+     driver.navigate().refresh();
+
+     //Navigate to back 
+     Thread.sleep(2000);
+     driver.navigate().back();
+
+     //Navigate to forward
+     Thread.sleep(2000);
+     driver.navigate().forward();
+
+     //fetch the current url
+     Thread.sleep(2000);
+     System.out.println(driver.getCurrentUrl());
+
+     //Get the title of web page
+     driver.navigate().back();
+     System.out.println(driver.getTitle());
+
+     //Close the browser
+     driver.close();
+
+     }
+
+     }
+
+
+//output:-
+https://www.google.com/
+Log in to Facebook
+
