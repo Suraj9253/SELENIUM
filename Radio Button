@@ -1,0 +1,40 @@
+package JavaPackage;
+
+
+
+import org.openqa.selenium.By;
+import org.openqa.selenium. WebDriver; 
+import org.openqa.selenium.chrome.ChromeDriver; 
+
+
+public class radiobutton {
+	
+	public static void main (String[] args) throws InterruptedException {
+
+
+		// setting the property of chrome browser and passing chrome driver path
+		System.setProperty("webdriver.chrome.driver", "E:\\Chrome Driver\\chromedriver-win64\\chromedriver.exe"); 
+		
+		
+		
+        
+         WebDriver driver = new ChromeDriver();
+         //Open URL using get() method 
+     	driver.get("https://www.facebook.com/login/");
+     	
+     	Thread.sleep(2000);
+     	
+     	
+     	driver.findElement(By.xpath("//a[(@class='_97w4')]")).click();
+     	
+     	
+     	Thread.sleep(2000);
+     	
+     	driver.findElement(By.xpath("//input[contains(@id,'u_0_b')]")).click();
+     	
+        Thread.sleep(2000);
+     	
+     	driver.findElement(By.xpath("//input[@value='1']")).click();
+     	
+}
+}
